@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # This route is not needed since it duplicates the next route.
+  # get 'students/index'
+
+  # The route for the index action
+  get '/students', to: 'students#index'
+
+  # The route for the grades action
+  get '/students/grades', to: 'students#grades'
 end
